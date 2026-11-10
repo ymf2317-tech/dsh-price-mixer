@@ -1,0 +1,56 @@
+{
+  "name": "dsh-price-mixer",
+  "version": "0.2.1",
+  "description": "Injects custom per-model prices into the models.dev price book that dsh-context fetches, so self-hosted / proxied models (agent2api, -max names, trae/workbuddy) get a real Est. Cost in the Context panel. Ships a sidebar panel to edit the shadow prices. No file of dsh-context is modified.",
+  "author": "ymf2317-tech",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ymf2317-tech/dsh-price-mixer.git"
+  },
+  "homepage": "https://github.com/ymf2317-tech/dsh-price-mixer#readme",
+  "bugs": {
+    "url": "https://github.com/ymf2317-tech/dsh-price-mixer/issues"
+  },
+  "engines": {
+    "node": ">=22.19.0",
+    "dsh": ">=0.2.0-rc.2"
+  },
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "cordis",
+    "dsh-context",
+    "pricing",
+    "cost",
+    "models.dev",
+    "openai-compatible",
+    "reverse-proxy"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-slots"
+      ]
+    }
+  }
+}

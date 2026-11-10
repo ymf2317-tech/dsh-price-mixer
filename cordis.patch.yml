@@ -1,0 +1,6 @@
+# Bundle patch layer: register the host-half plugin so its module gets
+# imported inside the dsh host process (the fetch shell installs at import
+# time). No config block needed — the plugin needs no settings.
+- insert:
+    - id: price-mixer
+      name: dsh-price-mixer
