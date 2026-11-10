@@ -75,13 +75,21 @@ dsh-context ──fetch(api.json)──▶ [壳] ──fetch──▶ models.dev
 
 DSH 的 profile 目录（默认 `~/.dsh/profiles/web`）下有两种装法。
 
-### 方式 A：从 GitHub 安装（推荐）
+### 方式 A：从 npm 安装（推荐）
+
+```bash
+dsh plugin --profile web add dsh-price-mixer
+```
+
+已发布到 npm：[dsh-price-mixer](https://www.npmjs.com/package/dsh-price-mixer)（仓库地址、版本历史、README 在那边都能看到）。
+
+### 方式 B：从 GitHub 安装（想跟最新提交时）
 
 ```bash
 dsh plugin --profile web add github:ymf2317-tech/dsh-price-mixer
 ```
 
-### 方式 B：本地 vendor 目录（不想让它自动更新时）
+### 方式 C：本地 vendor 目录（不想让它自动更新时）
 
 ```bash
 # 1. 放到 profile 的 vendor 下
