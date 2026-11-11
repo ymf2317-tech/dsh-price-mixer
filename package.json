@@ -1,7 +1,7 @@
 {
   "name": "dsh-price-mixer",
-  "version": "0.2.1",
-  "description": "Injects custom per-model prices into the models.dev price book that dsh-context fetches, so self-hosted / proxied models (agent2api, -max names, trae/workbuddy) get a real Est. Cost in the Context panel. Ships a sidebar panel to edit the shadow prices. No file of dsh-context is modified.",
+  "version": "0.3.0",
+  "description": "Discovers the models your DSH profile actually configures, matches each name against the models.dev price book (family / version / tier slots, with confidence levels), and injects those prices into the book that dsh-context fetches — so self-hosted / proxied models get a real Est. Cost in the Context panel. Ships a sidebar panel to confirm candidates, pin aliases and type prices. No file of dsh-context is modified.",
   "author": "ymf2317-tech",
   "license": "MIT",
   "type": "module",
@@ -18,6 +18,9 @@
     "dsh": ">=0.2.0-rc.2"
   },
   "main": "lib/index.js",
+  "scripts": {
+    "test": "node test/match-check.mjs"
+  },
   "exports": {
     ".": "./lib/index.js",
     "./client": "./lib/client.js",
