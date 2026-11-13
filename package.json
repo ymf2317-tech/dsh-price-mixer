@@ -1,6 +1,6 @@
 {
   "name": "dsh-price-mixer",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Discovers the models your DSH profile actually configures, matches each name against the models.dev price book (family / version / tier slots, with confidence levels), and injects those prices into the book that dsh-context fetches — so self-hosted / proxied models get a real Est. Cost in the Context panel. Ships a sidebar panel to confirm candidates, pin aliases and type prices. No file of dsh-context is modified.",
   "author": "ymf2317-tech",
   "license": "MIT",
